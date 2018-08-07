@@ -1,4 +1,5 @@
-Let’s write some Apex code that sends an email to your Mission Specialist on Earth every time you change your flight path.
+﻿Let’s write some Apex code that sends an email to your Mission Specialist on Earth every time you change your flight path.
+--------------------------------------------------------------------------------------------------------------------------
 
 public class EmailMissionSpecialist {
    // Public method
@@ -17,6 +18,7 @@ public class EmailMissionSpecialist {
       // Call a helper method to inspect the returned results
       inspectResults(results);
    }
+
    // Helper method
    private static Boolean inspectResults(Messaging.SendEmailResult[] results) {
       Boolean sendResult = true;
