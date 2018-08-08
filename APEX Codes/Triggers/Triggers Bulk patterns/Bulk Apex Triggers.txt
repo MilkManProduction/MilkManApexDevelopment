@@ -1,4 +1,5 @@
 Trigger Bulk - SoqlTriggerNotBulk
+-----------------------------------------
 
 trigger SoqlTriggerNotBulk on Account(after update) {   
     for(Account a : Trigger.New) {
@@ -13,7 +14,7 @@ trigger SoqlTriggerNotBulk on Account(after update) {
 
 ---------------------------------------------------------------------------------------------
 combining the SOQL query with the for loop in one statement
-
+----------------------------------------------------------
 
 trigger SoqlTriggerBulk on Account(after update) {  
     // Perform SOQL query once.    
@@ -73,10 +74,8 @@ trigger DmlTriggerBulk on Account(after update) {
 
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
-
-
 Bulk Design Pattern in Action: Trigger Example for Getting Related Records
-
+---------------------------------------------------------------------------------
 
 [SELECT Id,Name FROM Account WHERE Id IN :Trigger.New AND
                                              Id NOT IN (SELECT AccountId FROM Opportunity)]
@@ -86,7 +85,7 @@ for(Account a : [SELECT Id,Name FROM Account WHERE Id IN :Trigger.New AND
 }
 
 Code :
-------
+-----------------------------------------------------------------------------------------
 trigger AddRelatedRecord on Account(after insert, after update) {
     List<Opportunity> oppList = new List<Opportunity>();
     
