@@ -1,0 +1,40 @@
+Vf Contact 
+
+
+<apex:page standardController="Contact" >
+    <apex:form >
+        
+        <apex:pageBlock title="Edit Contact">
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!Contact.FirstName}"/>
+                <apex:inputField value="{!Contact.LastName}"/>
+                <apex:inputField value="{!Contact.Email}"/>
+                <apex:inputField value="{!Contact.Birthdate}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>
+
+
+------------------------------------------------------------------------
+
+<apex:page showHeader="false" title="DisplayImage" sidebar="false"> 
+    <apex:form>
+        <table>
+            <tr>
+                <td width="1000px" height="600px;" align="center">
+                    <apex:image url="https://developer.salesforce.com/files/salesforce-developer-network-logo.png" />
+                </td>
+           </tr>
+        </table>
+    </apex:form>
+</apex:page>
+
+https://developer.salesforce.com/files/salesforce-developer-network-logo.png
+
+
+------------------------------------------------------------------------
